@@ -1,0 +1,20 @@
+{
+  "name": "TripAdvisor_proxyserver_jim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seattle-Navigators/TripAdvisor_proxyserver_jim.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seattle-Navigators/TripAdvisor_proxyserver_jim/issues"
+  },
+  "homepage": "https://github.com/Seattle-Navigators/TripAdvisor_proxyserver_jim#readme"
+}
