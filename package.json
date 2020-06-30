@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/Seattle-Navigators/TripAdvisor_proxyserver_jim/issues"
   },
-  "homepage": "https://github.com/Seattle-Navigators/TripAdvisor_proxyserver_jim#readme"
+  "homepage": "https://github.com/Seattle-Navigators/TripAdvisor_proxyserver_jim#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http-proxy": "^1.18.1",
+    "morgan": "^1.10.0",
+    "nodemon": "2.0.4",
+    "path": "^0.12.7"
+  }
 }
