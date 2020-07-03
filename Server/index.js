@@ -12,8 +12,8 @@ const dist = path.resolve(__dirname, '..', 'client', 'dist');
 
 const bestNearby = 'http://localhost:3003';
 const reviews = 'http://localhost:3004';
-const main = 'http://localhost:3001';
-const experiences = 'http://localhost:3002';
+const main = 'http://localhost:3007';
+const experiences = 'http://localhost:3636';
 
 
 app.use('/:attractionId', express.static(dist));
@@ -46,11 +46,16 @@ app.patch('/:productId/api/reviews/:reviewId/:imageId', (req, res) => {
 });
 
 // main component
-app.get('/:attractionId/carousels/bundle.js', (req, res) => {
+app.get('/:id/imageMain/bundle.js', (req, res) => {
     proxy.web(req, res, {target: main});
-    console.log(res)
 });
-app.get('/api/carousels/:id', (req, res) => {
+app.get('/:id/api/carousels', (req, res) => {
+    proxy.web(req, res, {target: main});
+});
+app.patch('/:imgId/api/carousels/helpful', (req, res) => {
+    proxy.web(req, res, {target: main});
+});
+app.patch('/:imgId/api/carousels/reported', (req, res) => {
     proxy.web(req, res, {target: main});
 });
 
@@ -58,8 +63,11 @@ app.get('/api/carousels/:id', (req, res) => {
 app.get('/:id/exp/bundle.js', (req, res) => {
     proxy.web(req, res, {target: experiences});
 });
+app.get('/:id/fonts', (req, res) => {
+    proxy.web(req, res, {target: experiences});
+});
 
-app.get('/:id/api/exp', (req, res) => {
+app.get('/:id/exp/api', (req, res) => {
     proxy.web(req, res, {target: experiences});
 });
 
